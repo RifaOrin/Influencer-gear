@@ -22,7 +22,8 @@ body {
 }
 
 /* Navbar styles */
-.navbar {
+.navbar,
+.banner {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -30,7 +31,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 96px;
-  padding-bottom: 50px;
+  margin-bottom: 80px;
 }
 .nav-links {
   gap: 34px;
@@ -50,7 +51,47 @@ body {
   font-size: 1.5rem;
   color: var(--primary-color);
 }
-
+/* Banner Styles */
+.banner {
+  justify-content: space-between;
+  align-items: center;
+}
+.banner-content {
+  max-width: 582px;
+}
+.banner-title {
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 4.375rem;
+  color: var(--primary-color);
+}
+.banner-description {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.banner-image {
+  width: 475px;
+  height: 475px;
+  background-image: url("../images/Circle design.svg");
+  background-size: contain; /* ensures full circle stays visible */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.camera-img {
+  width: 100%;
+}
+.prebook-btn {
+  padding: 10px 24px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 41px;
+}
 /* Responsive Design */
 
 @media screen and (max-width: 576px) {
@@ -63,5 +104,28 @@ body {
   }
   i.searchbar {
     display: none;
+  }
+  .banner {
+    flex-direction: column-reverse;
+  }
+  .banner-content {
+    margin: 14px 18px 50px 18px;
+  }
+  .banner-image {
+    height: 257px;
+    width: 257px;
+  }
+  .banner-title {
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: normal;
+  }
+  .banner-description {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  .prebook-btn {
+    display: block;
+    margin: 0 auto;
   }
 }
