@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 /* Shared Styles */
 * {
   margin: 0;
@@ -55,6 +55,7 @@ body {
 .banner {
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 100px;
 }
 .banner-content {
   max-width: 582px;
@@ -70,7 +71,7 @@ body {
   font-size: 1rem;
   color: var(--primary-color);
   margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 }
 .banner-image {
   width: 475px;
@@ -96,7 +97,75 @@ body {
   justify-content: center;
   gap: 8px;
 }
-
+/* Main section */
+main {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+main > section {
+  margin-bottom: 100px;
+}
+.custom-hr {
+  border: 0;
+  border-top: 1px solid;
+  border-image: linear-gradient(
+      to right,
+      rgba(192, 204, 218, 0.1) 0%,
+      rgba(192, 204, 218, 0.6) 50%,
+      rgba(192, 204, 218, 0.1) 100%
+    )
+    1;
+}
+.sponsors {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+/* Popular section style */
+.popular-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.175rem;
+  color: var(--primary-color);
+  line-height: 4.375rem;
+  margin-bottom: 50px;
+}
+.card {
+  width: 329px;
+  height: 476px;
+  padding: 17px 15px;
+  background-color: var(--white);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.card-img {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.card-title {
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  color: #18191f;
+  margin-bottom: 6px;
+}
+.dollar-amount {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.87);
+}
 /* Responsive Design */
 
 @media screen and (max-width: 576px) {
@@ -135,5 +204,19 @@ body {
     margin: 0 auto;
     font-size: 1rem;
     font-weight: 500;
+  }
+  .custom-hr {
+    display: none;
+  }
+  .sponsors {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 23px;
+  }
+  .sponsors img {
+    width: 60px;
+  }
+  main {
+    max-width: 329px;
+    margin: 0 auto;
   }
 }
