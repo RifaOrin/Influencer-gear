@@ -23,6 +23,19 @@ body {
   display: flex;
 }
 
+.primary-btn {
+  padding: 10px 24px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
 /* Navbar styles */
 .navbar,
 .banner {
@@ -86,19 +99,7 @@ body {
 .camera-img {
   width: 100%;
 }
-.prebook-btn {
-  padding: 10px 24px;
-  background-color: var(--secondary-color);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 1rem;
-  border: none;
-  border-radius: 41px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
+
 /* Main section */
 main {
   max-width: 1110px;
@@ -128,6 +129,10 @@ main > section {
   align-items: center;
 }
 /* Popular section style */
+.popular-section {
+  max-width: 1047px;
+}
+
 .popular-title {
   text-align: center;
   font-weight: 600;
@@ -137,7 +142,6 @@ main > section {
   margin-bottom: 50px;
 }
 .card {
-  width: 329px;
   height: 476px;
   padding: 17px 15px;
   background-color: var(--white);
@@ -152,6 +156,7 @@ main > section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  justify-content: center;
 }
 .card-title {
   font-weight: 500;
@@ -193,6 +198,36 @@ main > section {
   align-items: center;
   gap: 5px;
 }
+/* Feature Products section */
+.feature-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feature-product-describe {
+  width: 610px;
+}
+.feature-product-title {
+  font-weight: 700;
+  font-size: 2.375rem;
+  line-height: 3.75rem;
+  color: #0a0826;
+  margin-bottom: 16px;
+}
+.feature-product-description {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #6c6c6c;
+  width: 500px;
+  margin-bottom: 16px;
+}
+#join-now {
+  border-radius: 0px;
+}
+.feature-product-img {
+  width: 100%;
+}
 /* Responsive Design */
 
 @media screen and (max-width: 576px) {
@@ -206,7 +241,8 @@ main > section {
   i.searchbar {
     display: none;
   }
-  .banner {
+  .banner,
+  .feature-products {
     flex-direction: column-reverse;
   }
   .banner-content {
@@ -226,7 +262,7 @@ main > section {
     text-align: center;
     font-weight: 500;
   }
-  .prebook-btn {
+  .primary-btn {
     display: block;
     margin: 0 auto;
     font-size: 1rem;
@@ -252,5 +288,22 @@ main > section {
   }
   .see-more {
     margin-top: 30px;
+  }
+  .feature-product-describe {
+    width: 329px;
+  }
+  .feature-product-title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+  .feature-product-description {
+    text-align: center;
+    width: auto;
+  }
+  #join-now {
+    margin-bottom: 30px;
+    font-weight: 700;
+    gap: 8px;
   }
 }
