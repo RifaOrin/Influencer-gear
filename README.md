@@ -27,14 +27,13 @@ https://rifaorin.github.io/Influencer-gear/
 - Google Fonts  
 - Font Awesome
 
-
-
-## 🛠️ Built With
-- HTML5  
-- CSS3  
-- Google Fonts  
-- Font Awesome (if used)
-
----
-
 ## 📁 Project Structure
+To get this project up and running locally:
+1. **Clone the repository:**
+   ```bash
+       git clone https://github.com/RifaOrin/Influencer-gear.git
+       cd Influencer-gear
+   ```
+
+2. Open http://127.0.0.1:5500/index.html in your browser to view the app.
+
